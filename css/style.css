@@ -1,0 +1,464 @@
+
+/* * asterisco selector universal */
+/* para class va . adelante y despues la refe */
+/* para id va # adelante y despues la refe */
+
+/* selectores de tipo son por elemento 
+especifico por ej editar h1 se pone h1 en selector
+y solo cambia el h1 o si pones h2 cambian todos los h2 */
+
+/* selectores de clase "class" es un atributo q
+se le pone a un elemento por ej en especifico a h3 y solo aplica a ese
+luego se especifican valores de a h3 en css con el "." */
+
+/* pseudo clases (son varias) sirven por ejemplo para aplicar 
+un hover a una etiqueta */
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+*{
+box-sizing: border-box; 
+padding: 0;   
+margin: 0;
+
+}
+
+
+/* header contenido */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #3C2257;
+align-items: center;
+padding: 10px;
+position: fixed;
+width: 100%;
+
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+}
+
+
+.contenedor__logo { 
+  width: 48px;
+  height: 48px;
+   display: flex;
+   align-items: center;
+}
+ 
+
+.contenedor__titulo {
+  font-family: "montserrat" , sans-serif;
+  color: #FEFDFD;
+  align-items: center;
+padding: 10px;
+}
+
+
+/* en absolute se ajusta el tamaño de la caja al contenido/punto de referencia el vp o el contenedor posicionado */
+.buscar {
+  position: relative;
+  left: 300px;
+  padding: 5px; 
+ 
+    }
+
+.buscar input {
+  width: 0px;
+  height: 30px; 
+  padding: 0 10px;
+  font-size: 16px;
+  color: #000000 ;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+transition: all 0.6s ease;
+}
+
+.btn  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #5C3EB3;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+text-align: center;
+  color:white;
+  font-size: 20px;  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.buscar:hover input {
+  width: 300px;
+}
+
+.buscar input:focus {
+  width: 240px;
+} 
+
+
+
+.iconos__redes a {
+  color: #FEFDFD;
+  padding: 4px;
+}
+
+.iconos__redes a:hover{
+  color: #B1AEBB;
+}
+
+/* navigation bar */
+.nav {
+  text-decoration: none ;
+  color: #000000;
+  font-size: 1.2rem;
+  font-family: "montserrat" , sans-serif;
+margin-top: 120px;
+position: fixed;
+width: 100%;
+background-color: #FEFDFD;
+right: 0px;
+padding: 10px;
+border-radius: 0px 0px 10px 10px;
+}
+
+
+.nav__ul {
+  text-align: center;
+  font-family: "montserrat" , sans-serif;
+ 
+}
+
+.nav__li{
+  display: inline-block;
+list-style: none;
+font-family: "montserrat" , sans-serif;
+padding: 8px;
+}
+
+.nav-link {
+text-decoration: none;
+color: inherit;
+padding: 12px;
+font-size: 1.1rem;
+position: relative;
+font-family: "montserrat" , sans-serif;
+}
+
+.nav i {
+  box-sizing: border-box;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.nav-link::after {  
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color:#3C2257 ;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all .5s;
+  will-change: width; 
+  font-family: "montserrat" , sans-serif;
+}
+
+.nav-link:hover:after{ 
+  width: 100%;
+  right: 0;
+  font-family: "montserrat" , sans-serif;
+}
+
+
+.nav__responsive-ul {
+  display: none;
+}
+
+.nav__responsive-button-container {
+ position: absolute;
+ width: 100%;
+ font-size: 25px;
+ background-color: #3C2257;
+ margin-top: -64px; 
+ z-index: 100;
+}
+.nav__responsive-button {
+  padding: 6px 20px;
+  color: #FEFDFD;
+  text-align: right;
+  width: 100%;
+  
+}
+
+@media only screen and (max-width: 500px) {
+  .nav__ul {
+    display: none;
+  }
+
+  /* .nav {
+    height: 37px;
+    width: 100%;
+    background-color: #3C2257; 
+
+  } */
+
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 37px;
+    padding-top: 37px;
+    height: 37px;
+  }
+
+.nav__li-container {
+  position: relative;
+  top: -1000px;
+height: calc(100vh - 64px); 
+width: 75%;
+background-color: #3C2257;
+transition: all 1s;
+z-index: 1;
+padding-top: 27px;
+}
+
+  .nav__responsive-li {
+    width: 100%;
+  }
+  .nav__responsive-li i {
+    box-sizing: border-box;
+    text-align: center;
+    margin-right: 5px;
+    width: 30px;
+    color: #FEFDFD;
+  }
+
+  .nav__responsive-li a {
+    color: #FEFDFD;
+  }
+
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: -37px;
+
+  }
+}
+
+
+
+
+/* comienzo de body */
+body {
+  font-family: 'Montserrat', sans-serif;
+display: flex;
+ 
+}
+
+.contenedor_titulo_slogan {
+  margin-left: 16px;
+  margin-top: 120px;
+  width: 650px;
+  float: left;
+  
+  }
+
+.section_titulo_slogan1 {
+  font-size: 90px;
+}
+
+.section_titulo_slogan2 {
+font-size: 48px;
+margin-top: 32px;
+}
+
+.section_titulo_slogan_imagen {
+width: 400px;
+margin-left: 650px;
+margin-top: -400px;
+}
+
+.section_titulo_slogan_parrafo {
+margin-top: 40px;
+line-height: 24px;
+
+}
+
+.contenedor_cards {
+width: 500px; 
+max-width: 1100px;
+}
+
+.cards {
+  width: 100%;  
+  margin: 20px;
+border-radius: 6px;
+overflow: hidden;
+background-color: #FEFDFD;
+box-shadow: 0px 1px 10px rgba(0, 0, 0, .2);
+cursor: default;
+transition: all 400ms ease;
+}
+
+.cards:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
+transform: translateY(-3%);
+}
+
+.cards img {
+width: 100%;
+height: 210px;
+
+}
+
+.cards .contenedor_cards_contenido {
+  padding: 15px;
+  text-align: center;
+
+}
+
+.cards .contenedor_cards_contenido p {
+  line-height: 1.5;
+  color: #6a6a6a;
+}
+
+.cards .contenedor_cards_contenido h3{
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.cards .contenedor_cards_contenido a {
+text-decoration: none;
+display: inline-block;
+padding: 10px;
+margin-top: 10px;
+color: #2fb4cc;
+border: 1px solid #2fb4cc;
+border: radius 4px;
+transition: all 400ms ease;
+}
+
+.cards .contenedor_cards_contenido a:hover {
+background: #2fb4cc;
+color: #FEFDFD;
+}
+
+
+iframe {
+ display: flex;
+ flex-direction: column;
+width: 300px;
+height: 250px;
+}
+/* .podcast {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  width: 300px;
+height: 250px;
+} */
+
+/* ASIDE */
+.contenedor_animal_dead {
+  border-radius: 16px;  
+  padding: 16px;
+  width: 300px;
+  font-size: 14px; color: #FEFDFD; 
+  background: #3C2257;
+
+
+}
+
+aside {
+  display: flex;
+flex-direction: column-reverse;
+width: 300px;
+height: 1000px;
+
+}
+aside div {
+  margin-bottom: 16px;
+}
+
+.contenedor_animal_dead_titulo1 {
+text-align: left;
+}
+
+.contenedor_animal_dead_titulo2 {
+  color: #B1AEBB;
+
+}
+
+.contenedor_animal_dead_list {
+list-style: none;
+padding-top: 4px;
+line-height: 48px;
+}
+
+
+
+
+/* comienzo de footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #3C2257;
+align-items: center;
+padding: 10px;
+position: static;
+clear: both;
+}
+
+footer h4 {
+  font-family: "montserrat" , sans-serif;
+  color: #FEFDFD;
+  align-items: center;
+padding: 10px;
+}
+
+footer p {
+  font-family: "montserrat" , sans-serif;
+  color: #FEFDFD;
+  align-items: center;
+padding: 10px;
+margin-left: 50px;
+}
+
+
+.btn_volver_arriba {
+  color: #FEFDFD;
+margin-right: 16px  ;
+}
+
+.btn_volver_arriba:hover {
+  color: #B1AEBB;
+}
+
+
+/* page contactos */
+.contact-form__input {
+font-size: 1rem;
+/* background-color: #3C2257; */
+line-height: 2; 
+font-family: "montserrat" , sans-serif;
+}
+/* line height nace del centro de la letra desde el medio/ 1 lh es igual a medio del tamaño
+de la letra hace arriba y medio hacia abajo o sea 0.5 y 0.5 */
+
+/* line weight determina el grosor de la tipografia */
+/* font size family lh y lw lo mas importante */
+
+.contact-form {
+  font-size: 1rem;
+  font-family: "montserrat" , sans-serif;
+}
