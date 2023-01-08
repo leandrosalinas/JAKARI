@@ -25,6 +25,25 @@ margin: 0;
 
 }
 
+/* .contenedor__total {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+} */
+
+
+/* comienzo del body  */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+display: flex;
+ width: 100%;
+ padding: 0;   
+margin: 0;
+}
 
 /* header contenido */
 
@@ -257,42 +276,51 @@ padding-top: 27px;
 
 
 /* comienzo de body */
-body {
-  font-family: 'Montserrat', sans-serif;
-display: flex;
- 
+
+
+section {
+  /* @media screen and (min-width:500px) */
+  display: flex;
+  width: 70%;
+  padding: 16px;
+background-color: #cacaca;
 }
 
-.contenedor_titulo_slogan {
-  margin-left: 16px;
-  margin-top: 120px;
-  width: 650px;
-  float: left;
-  
-  }
-
-.section_titulo_slogan1 {
-  font-size: 90px;
+main {
+  display: flex;
+  justify-content:center;
+  margin-top: 120px; 
+  background-color: #2fb4cc;
 }
+    
 
-.section_titulo_slogan2 {
-font-size: 48px;
-margin-top: 32px;
-}
-
-.section_titulo_slogan_imagen {
-width: 400px;
-margin-left: 650px;
-margin-top: -400px;
-}
-
-.section_titulo_slogan_parrafo {
-margin-top: 40px;
-line-height: 24px;
+ main h2 {
+  font-size: 80px;
+  font-weight: 800;
 
 }
 
-.contenedor_cards {
+main h3 {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+main p {
+  margin-top: 16px;
+  line-height: 24px;
+  width: 80%;
+}
+
+main img {
+  width: 300px;
+  height: 300px;
+  background-color: #4f3f2d;
+}
+
+
+
+/* comienzo cards home */ 
+/* .contenedor_cards {
 width: 500px; 
 max-width: 1100px;
 }
@@ -349,25 +377,26 @@ transition: all 400ms ease;
 .cards .contenedor_cards_contenido a:hover {
 background: #2fb4cc;
 color: #FEFDFD;
-}
-
-
-iframe {
- display: flex;
- flex-direction: column;
-width: 300px;
-height: 250px;
-}
-/* .podcast {
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-  width: 300px;
-height: 250px;
 } */
 
+
+
+
 /* ASIDE */
-.contenedor_animal_dead {
+
+aside {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+width: 30%;
+height: 100%;
+background-color: #af3d2e;
+margin-top: 120px; 
+
+}
+
+.contenedor__animal-dead {
+  margin: 16px;
   border-radius: 16px;  
   padding: 16px;
   width: 300px;
@@ -377,46 +406,39 @@ height: 250px;
 
 }
 
-aside {
-  display: flex;
-flex-direction: column-reverse;
-width: 300px;
-height: 1000px;
-
-}
-aside div {
-  margin-bottom: 16px;
-}
-
-.contenedor_animal_dead_titulo1 {
+.animal-dead__h2 {
 text-align: left;
 }
 
-.contenedor_animal_dead_titulo2 {
+.animal-dead__h4 {
   color: #B1AEBB;
 
 }
 
-.contenedor_animal_dead_list {
+.animal-dead__list {
 list-style: none;
 padding-top: 4px;
 line-height: 48px;
 }
 
-
-
+iframe {
+  display: flex;
+ width: 300px;
+ height: 250px;
+ margin: 16px;
+ }
 
 /* comienzo de footer */
 
 footer {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   height: 70px;
   background-color: #3C2257;
 align-items: center;
 padding: 10px;
-position: static;
-clear: both;
 }
 
 footer h4 {
